@@ -1,0 +1,17 @@
+{
+  "author": "Knut Eirik Leira Hjelle",
+  "name": "notifier-js",
+  "description": "A wrapper for notifying libraries (currently humane-js only)",
+  "version": "0.1.0",
+  "homepage": "https://github.com/hjellek/notifier-js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hjellek/notifier-js.git"
+  },
+  "main": "Notifier.js",
+  "engines": {},
+  "dependencies": {
+    "humane-js": "3.1.0"
+  },
+  "devDependencies": {}
+}
