@@ -60,22 +60,23 @@ var Notifier = (function () {
         var humaneOptions = {
             clickToClose: options.clickToHide,
             timeout: options.timeout,
-            baseClns: 'humane-bigbox',
-            addnCls: this.getHumaneAddClnsByType(options.type)
+            baseClns: Notifier.baseCssClass,
+            addnCls: this.getHumaneAdditionalClassByType(options.type)
         };
         return humaneOptions;
     };
 
-    Notifier.prototype.getHumaneAddClnsByType = function (type) {
+    Notifier.prototype.getHumaneAdditionalClassByType = function (type) {
+        var base = Notifier.additionalCssClass;
         switch (type) {
             case Notifier.TYPE_SUCCESS:
-                return 'humane-bigbox-success';
+                return base + 'success';
             case Notifier.TYPE_INFO:
-                return 'humane-bigbox-info';
+                return base + 'info';
             case Notifier.TYPE_ERROR:
-                return 'humane-bigbox-error';
+                return base + 'error';
             case Notifier.TYPE_WARNING:
-                return 'humane-bigbox-warning';
+                return base + 'warning';
         }
         return '';
     };
@@ -83,6 +84,8 @@ var Notifier = (function () {
     Notifier.TYPE_ERROR = 'error';
     Notifier.TYPE_INFO = 'info';
     Notifier.TYPE_WARNING = 'warning';
+
+    Notifier.baseCssClass = 'humane-bigbox';
+    Notifier.additionalCssClass = 'humane-bigbox-';
     return Notifier;
 })();
-//# sourceMappingURL=Notifier.js.map

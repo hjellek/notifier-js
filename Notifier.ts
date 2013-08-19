@@ -6,6 +6,9 @@ class Notifier
     public static TYPE_INFO = 'info';
     public static TYPE_WARNING = 'warning';
 
+    public static baseCssClass = 'humane-bigbox';
+    public static additionalCssClass = 'humane-bigbox-';
+
     private options:NotifierOptions = {
         clickToHide:false,
         timeout: 2500,
@@ -74,24 +77,25 @@ class Notifier
         var humaneOptions = {
             clickToClose: options.clickToHide,
             timeout: options.timeout,
-            baseClns: 'humane-bigbox',
-            addnCls: this.getHumaneAddClnsByType(options.type)
+            baseClns: Notifier.baseCssClass,
+            addnCls: this.getHumaneAdditionalClassByType(options.type)
         };
         return humaneOptions;
     }
 
-    private getHumaneAddClnsByType(type)
+    private getHumaneAdditionalClassByType(type)
     {
+        var base = Notifier.additionalCssClass;
         switch(type)
         {
             case Notifier.TYPE_SUCCESS:
-                return 'humane-bigbox-success';
+                return base+'success';
             case Notifier.TYPE_INFO:
-                return 'humane-bigbox-info';
+                return base+'info';
             case Notifier.TYPE_ERROR:
-                return 'humane-bigbox-error';
+                return base+'error';
             case Notifier.TYPE_WARNING:
-                return 'humane-bigbox-warning';
+                return base+'warning';
         }
         return '';
     }
