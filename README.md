@@ -1,7 +1,7 @@
 notifier-js
 ===========
 
-Small wrapper for humane-js to make it more convenient to use.
+Small wrapper for [humane-js](https://github.com/wavded/humane-js) to make it more convenient to use.
 
 Released under the MIT license
 
