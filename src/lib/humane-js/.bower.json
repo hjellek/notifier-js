@@ -15,6 +15,5 @@
     "commit": "a912264a0ba36f48472e12e18fb04a7f8319bd35"
   },
   "_source": "git://github.com/wavded/humane-js.git",
-  "_target": "~3.1.0",
-  "_direct": true
+  "_target": "~3.1.0"
 }
