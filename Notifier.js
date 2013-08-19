@@ -1,4 +1,4 @@
-///<reference path='../definitions/humane/humane.d.ts' />
+///<reference path='definitions/humane/humane.d.ts' />
 var Notifier = (function () {
     function Notifier() {
         this.options = {

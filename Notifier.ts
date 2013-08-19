@@ -1,4 +1,4 @@
-///<reference path='../definitions/humane/humane.d.ts' />
+///<reference path='definitions/humane/humane.d.ts' />
 class Notifier
 {
     public static TYPE_SUCCESS = 'success';

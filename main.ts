@@ -1,4 +1,4 @@
-///<reference path='src/Notifier.ts' />
+///<reference path='Notifier.ts' />
 
 var options:NotifierOptions = {
     clickToHide: false,
